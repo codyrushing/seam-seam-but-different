@@ -1,8 +1,8 @@
 {
-    "name": "casper",
-    "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
+    "name": "seam-theme",
+    "description": "Theme for seam-project.com",
     "demo": "https://demo.ghost.io",
-    "version": "2.9.10",
+    "version": "1.0.0",
     "engines": {
         "ghost": ">=2.0.0",
         "ghost-api": "v2"
@@ -13,7 +13,7 @@
         "mobile": "assets/screenshot-mobile.jpg"
     },
     "scripts": {
-        "dev": "gulp",
+        "dev": "parcel watch src/styles/index.less src/js/app.js --out-dir assets/built",
         "zip": "gulp zip",
         "test": "gscan .",
         "pretest": "gulp build",
@@ -82,5 +82,8 @@
                 "width": 2000
             }
         }
+    },
+    "dependencies": {
+        "parcel-bundler": "^1.12.3"
     }
 }
