@@ -21,8 +21,6 @@ projectFilesBackup
 
 .DS_Store
 
-dist/
-
 config.json
 changelog.md
 changelog.md.bk
