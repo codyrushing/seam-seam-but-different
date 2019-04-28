@@ -322,8 +322,25 @@ template {
   font-style: normal;
 }
 body {
-  display: block;
-  color: black;
+  background: #333;
+}
+#video-background {
+  width: 100%;
+  z-index: -100;
+  min-width: 850px;
+  position: relative;
+}
+.site-background {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 
