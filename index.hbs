@@ -2,15 +2,22 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
+
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
-  <div class="site-background">
-    <video autoplay loop id="video-background" muted plays-inline>
-      <source src="{{asset "highlight-reel-web.mp4"}}" type="video/mp4" />
-    </video>
-  </div>
-
   <div class="inner">
-
+    {{> post-content}}
   </div>
 </main>
+
+{{> subscribers-form }}
+
+<div class="site-background">
+  <video autoplay loop id="video-background" muted plays-inline>
+    <source src="{{asset "highlight-reel-web.mp4"}}" type="video/mp4" />
+  </video>
+</div>
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+{{/contentFor}}

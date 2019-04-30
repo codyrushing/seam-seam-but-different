@@ -1,0 +1,37 @@
+@import 'header.less';
+@import 'background.less';
+@import 'footer.less';
+@import 'home.less';
+
+body {
+  background: @color-dark;
+  color: @color-light;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-main,
+.site-header,
+.site-footer {
+  position: relative;
+}
+
+.site-main {
+  z-index: 1;
+  flex-grow: 1;
+  .inner {
+    padding: 2rem 1rem;
+  }
+}
+
+.site-footer {
+  z-index: 2;
+}
+
+.site-header {
+  z-index: 3;
+}

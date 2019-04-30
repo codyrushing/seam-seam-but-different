@@ -13,8 +13,9 @@
         "mobile": "assets/screenshot-mobile.jpg"
     },
     "scripts": {
-        "dev": "parcel watch $npm_package_config_src_files --out-dir $npm_package_config_build_dir --out-file index.css app.js",
-        "build": "parcel build $npm_package_config_src_files --out-dir $npm_package_config_build_dir",
+        "start": "ghost start --development --dir=../../../",
+        "dev": "node build.js",
+        "build": "export NODE_ENV=production; node build.js",
         "zip": "gulp zip",
         "test": "gscan .",
         "pretest": "gulp build",

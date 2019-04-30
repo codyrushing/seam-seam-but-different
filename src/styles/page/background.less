@@ -1,0 +1,39 @@
+.site-background {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+
+  & ~ * {
+    z-index: 1;
+  }
+
+  video,
+  img {
+    z-index: -100;
+    min-width: 800px;
+    position: relative;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+
+    // ensure coverage on wide displays
+    @media only screen and (min-aspect-ratio: ~"16/9"){
+      width: 100%;
+      height: auto;
+    }
+    // on narrow portrait screens, scale the video down so it's not so zoomed in
+    @media only screen and (max-aspect-ratio: ~"3/4"){
+      max-width: 200%;
+      object-fit: contain;
+    }
+
+  }
+}
