@@ -334,7 +334,7 @@ h4 {
 }
 a:link,
 a:visited {
-  color: #58848B;
+  color: #365D96;
 }
 html:not(.wf-active) {
   visibility: hidden;
@@ -348,15 +348,45 @@ html:not(.wf-active) {
 }
 .site-header .top-nav {
   display: flex;
+  justify-content: space-between;
+  font-family: 'Wigrum';
+}
+.site-header .top-nav svg {
+  fill: #fff;
 }
 .site-header .top-nav .top-nav-logo {
   display: block;
   padding: 0.5rem;
 }
 .site-header .top-nav .top-nav-logo svg {
-  fill: #fff;
-  height: 60px;
+  height: 45px;
   transition: fill 0.1s ease-in-out;
+}
+.site-header .top-nav .links {
+  display: flex;
+}
+.site-header .top-nav .links a {
+  padding: 1rem;
+  margin: 0 0.1rem;
+  transition: color 0.1s ease-in-out;
+}
+.site-header .top-nav .links a:hover {
+  color: #007a7b;
+}
+.site-header .top-nav .social-links {
+  display: flex;
+}
+.site-header .top-nav .social-links a:hover svg {
+  fill: #007a7b;
+}
+.site-header .top-nav .social-links svg {
+  height: 20px;
+  fill: #fff;
+  transition: fill 0.1s ease-in-out;
+}
+.site-header a {
+  text-decoration: none;
+  color: #fff;
 }
 .site-background {
   position: fixed;
@@ -403,6 +433,7 @@ html:not(.wf-active) {
 body {
   background: #000;
   color: #fff;
+  background: url('classy_fabric_@2x.27a62f73.png') center center repeat;
 }
 .site-wrapper {
   display: flex;
@@ -427,17 +458,24 @@ body {
 .site-header {
   z-index: 3;
 }
+.kg-card {
+  text-align: center;
+}
+.kg-card.kg-width-full {
+  width: 100vw;
+}
 .post-content {
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 1200px;
+  overflow-x: visible;
 }
 .post-content > * {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-  margin: 0;
+  margin: 1rem 0;
   display: block;
-  max-width: 1200px;
 }
 .styled-header {
   background: none;
@@ -456,7 +494,7 @@ body {
   right: 0;
   bottom: 0;
   z-index: -1;
-  opacity: 0.7;
+  opacity: 0.8;
   background: #58848B;
 }
 .styled-header span:nth-child(2n):before {

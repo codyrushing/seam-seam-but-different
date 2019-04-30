@@ -1,12 +1,15 @@
+@import 'card.less';
+
 .post-content {
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
+  background: rgba(0,0,0,0.5);
+  max-width: 1200px;
+  overflow-x: visible;
   & > * {
-    background: rgba(0,0,0,0.5);
-    padding: 1rem;
-    margin: 0;
+    margin: 1rem 0;
     display: block;
-    max-width: 1200px;
   }
 }

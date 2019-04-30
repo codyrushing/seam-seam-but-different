@@ -1,11 +1,12 @@
 <nav class="top-nav">
-  {{^is "post"}}
-      {{#if @site.logo}}
-          <a class="top-nav-logo" href="{{@site.url}}">{{> icons/seam-logo }}</a>
-      {{else}}
-          <a class="top-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
-      {{/if}}
-  {{/is}}
+    <a class="top-nav-logo" href="{{@site.url}}">{{> icons/seam-logo }}</a>
+    <div class="links">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Past shows</a>
+      {{> social-links }}      
+      <a href="#" class="menu-link">☰</a>
+    </div>
   {{!-- {{#if @site.navigation}}
       {{navigation}}
   {{/if}} --}}

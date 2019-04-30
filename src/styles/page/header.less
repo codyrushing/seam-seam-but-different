@@ -4,14 +4,49 @@
 
   .top-nav {
     display: flex;
+    justify-content: space-between;
+    font-family: 'Wigrum';
+    svg {
+      fill: @color-light;
+    }
     .top-nav-logo {
       display: block;
       padding: 0.5rem;
       svg {
-        fill: @color-light;
-        height: 60px;
+        height: 45px;
         transition: fill 0.1s ease-in-out;
       }
     }
+
+    .links {
+      display: flex;
+      a {
+        padding: 1rem;
+        margin: 0 0.1rem;
+        transition: color 0.1s ease-in-out;
+        &:hover {
+          color: @color-pale-turquoise;
+        }
+      }
+    }
+
+    .social-links {
+      display: flex;
+      a:hover {
+        svg {
+          fill: @color-pale-turquoise;
+        }
+      }
+      svg {
+        height: 20px;
+        fill: @color-light;
+        transition: fill 0.1s ease-in-out;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: @color-light;
   }
 }
