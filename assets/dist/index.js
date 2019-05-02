@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./fonts/wigrum_medium-webfont.woff2":[["wigrum_medium-webfont.c63bbf83.woff2","fonts/wigrum_medium-webfont.woff2"],"fonts/wigrum_medium-webfont.woff2"],"./fonts/wigrum_medium-webfont.woff":[["wigrum_medium-webfont.0ab1b7d6.woff","fonts/wigrum_medium-webfont.woff"],"fonts/wigrum_medium-webfont.woff"],"./fonts/wigrum_medium_italic-webfont.woff2":[["wigrum_medium_italic-webfont.e74d322b.woff2","fonts/wigrum_medium_italic-webfont.woff2"],"fonts/wigrum_medium_italic-webfont.woff2"],"./fonts/wigrum_medium_italic-webfont.woff":[["wigrum_medium_italic-webfont.690e95ee.woff","fonts/wigrum_medium_italic-webfont.woff"],"fonts/wigrum_medium_italic-webfont.woff"],"./fonts/wigrum_bold-webfont.woff2":[["wigrum_bold-webfont.22b9e768.woff2","fonts/wigrum_bold-webfont.woff2"],"fonts/wigrum_bold-webfont.woff2"],"./fonts/wigrum_bold-webfont.woff":[["wigrum_bold-webfont.0ddbc8eb.woff","fonts/wigrum_bold-webfont.woff"],"fonts/wigrum_bold-webfont.woff"],"./../../assets/img/classy_fabric_@2x.png":[["classy_fabric_@2x.27a62f73.png","../../assets/img/classy_fabric_@2x.png"],"../../assets/img/classy_fabric_@2x.png"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./fonts/wigrum_medium-webfont.woff2":[["wigrum_medium-webfont.c63bbf83.woff2","fonts/wigrum_medium-webfont.woff2"],"fonts/wigrum_medium-webfont.woff2"],"./fonts/wigrum_medium-webfont.woff":[["wigrum_medium-webfont.0ab1b7d6.woff","fonts/wigrum_medium-webfont.woff"],"fonts/wigrum_medium-webfont.woff"],"./fonts/wigrum_medium_italic-webfont.woff2":[["wigrum_medium_italic-webfont.e74d322b.woff2","fonts/wigrum_medium_italic-webfont.woff2"],"fonts/wigrum_medium_italic-webfont.woff2"],"./fonts/wigrum_medium_italic-webfont.woff":[["wigrum_medium_italic-webfont.690e95ee.woff","fonts/wigrum_medium_italic-webfont.woff"],"fonts/wigrum_medium_italic-webfont.woff"],"./fonts/wigrum_bold-webfont.woff2":[["wigrum_bold-webfont.22b9e768.woff2","fonts/wigrum_bold-webfont.woff2"],"fonts/wigrum_bold-webfont.woff2"],"./fonts/wigrum_bold-webfont.woff":[["wigrum_bold-webfont.0ddbc8eb.woff","fonts/wigrum_bold-webfont.woff"],"fonts/wigrum_bold-webfont.woff"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55691" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58279" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

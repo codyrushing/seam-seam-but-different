@@ -322,9 +322,9 @@ template {
   font-style: normal;
 }
 body {
-  font-family: 'Alegreya', serif;
+  font-family: 'PT Sans', serif;
   line-height: 1.2;
-  font-size: 120%;
+  font-size: 16px;
 }
 h1,
 h2,
@@ -334,7 +334,8 @@ h4 {
 }
 a:link,
 a:visited {
-  color: #365D96;
+  color: #fff;
+  text-decoration: none;
 }
 html:not(.wf-active) {
   visibility: hidden;
@@ -342,13 +343,18 @@ html:not(.wf-active) {
 .center {
   text-align: center;
 }
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  /* for removing the highlight */
+}
 .site-header {
-  background: #111111;
-  background: linear-gradient(180deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.8) 80%, rgba(17, 17, 17, 0) 100%);
+  background: rgba(0, 0, 0, 0.8);
 }
 .site-header .top-nav {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   font-family: 'Wigrum';
 }
 .site-header .top-nav svg {
@@ -362,19 +368,35 @@ html:not(.wf-active) {
   height: 45px;
   transition: fill 0.1s ease-in-out;
 }
-.site-header .top-nav .links {
-  display: flex;
-}
-.site-header .top-nav .links a {
+.site-header .top-nav a {
   padding: 1rem;
   margin: 0 0.1rem;
   transition: color 0.1s ease-in-out;
 }
-.site-header .top-nav .links a:hover {
+.site-header .top-nav a:hover {
   color: #007a7b;
+}
+.site-header .top-nav .links {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 414px) {
+  .site-header .top-nav .links {
+    display: none;
+  }
+}
+.site-header .top-nav .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .site-header .top-nav .social-links {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .site-header .top-nav .social-links a:hover svg {
   fill: #007a7b;
@@ -429,11 +451,40 @@ html:not(.wf-active) {
 }
 .site-footer {
   z-index: 2;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+.site-footer .site-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-footer .social-links {
+  display: flex;
+}
+.site-footer .social-links a {
+  padding: 5px;
+  margin: 0 0.2rem;
+}
+.site-footer .social-links a:last-child {
+  margin-right: 0;
+}
+.site-footer .social-links svg {
+  height: 20px;
+  fill: #fff;
+}
+.home-template .post-content {
+  background: none;
+  text-align: center;
+}
+.home-template .post-content > *:not(.styled-header) {
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  padding: 1rem;
 }
 body {
   background: #000;
   color: #fff;
-  background: url('classy_fabric_@2x.27a62f73.png') center center repeat;
 }
 .site-wrapper {
   display: flex;
@@ -465,17 +516,35 @@ body {
   width: 100vw;
 }
 .post-content {
-  display: flex;
   margin: 0 auto;
-  flex-direction: column;
-  align-items: center;
   background: rgba(0, 0, 0, 0.5);
   max-width: 1200px;
-  overflow-x: visible;
 }
-.post-content > * {
-  margin: 1rem 0;
-  display: block;
+.post-content a:link,
+.post-content a:visited {
+  color: #365D96;
+  text-decoration: underline;
+}
+#modal-wrapper {
+  position: relative;
+  z-index: 999;
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .inner {
+  position: relative;
+  width: 685px;
+  max-width: 90%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 .styled-header {
   background: none;

@@ -2,7 +2,7 @@ import WebFont from 'webfontloader';
 
 WebFont.load({
   google: {
-    families: ['Alegreya:400,400i,700']
+    families: ['PT Sans:400,700']
   },
   custom: {
     families: ['Wigrum']

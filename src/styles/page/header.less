@@ -1,10 +1,11 @@
 .site-header {
-  background: rgb(17,17,17);
-  background: linear-gradient(180deg, rgba(17,17,17,0.8) 0%, rgba(17,17,17,0.8) 80%, rgba(17,17,17,0) 100%);
+  background: rgba(0,0,0,0.8);
+  // background: linear-gradient(180deg, rgba(17,17,17,0.8) 0%, rgba(17,17,17,0.8) 80%, rgba(17,17,17,0) 100%);
 
   .top-nav {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     font-family: 'Wigrum';
     svg {
       fill: @color-light;
@@ -18,20 +19,36 @@
       }
     }
 
+    a {
+      padding: 1rem;
+      margin: 0 0.1rem;
+      transition: color 0.1s ease-in-out;
+      &:hover {
+        color: @color-pale-turquoise;
+      }
+    }
+
     .links {
       display: flex;
-      a {
-        padding: 1rem;
-        margin: 0 0.1rem;
-        transition: color 0.1s ease-in-out;
-        &:hover {
-          color: @color-pale-turquoise;
-        }
-      }
+      flex-wrap: wrap;
+      .respond-to-mobile-large({
+        display: none;
+      });
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
     .social-links {
       display: flex;
+      justify-content: center;
+      align-items: center;
       a:hover {
         svg {
           fill: @color-pale-turquoise;
@@ -43,6 +60,7 @@
         transition: fill 0.1s ease-in-out;
       }
     }
+
   }
 
   a {
