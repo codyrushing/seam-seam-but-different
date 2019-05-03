@@ -322,7 +322,7 @@ template {
   font-style: normal;
 }
 body {
-  font-family: 'PT Sans', serif;
+  font-family: 'Alegreya', serif;
   line-height: 1.2;
   font-size: 16px;
 }
@@ -410,6 +410,25 @@ html:not(.wf-active) {
   text-decoration: none;
   color: #fff;
 }
+.site-main .post-title {
+  display: flex;
+}
+.site-main .post-title h1 {
+  display: inline-block;
+  padding: 0.5rem;
+  background: #58848B;
+}
+.site-main > .post-inner {
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 1200px;
+  padding: 0.5rem;
+}
+.site-main a:link,
+.site-main a:visited {
+  color: #365D96;
+  text-decoration: underline;
+}
 .site-background {
   position: fixed;
   display: flex;
@@ -435,16 +454,15 @@ html:not(.wf-active) {
   width: auto;
   object-fit: cover;
 }
-@media only screen and (min-aspect-ratio: 16/9) {
+@media only screen and (min-aspect-ratio: 4/3) {
   .site-background video,
   .site-background img {
+    object-fit: cover;
     width: 100%;
-    height: auto;
   }
 }
 @media only screen and (max-aspect-ratio: 3/4) {
-  .site-background video,
-  .site-background img {
+  .site-background video {
     max-width: 200%;
     object-fit: contain;
   }
@@ -453,6 +471,7 @@ html:not(.wf-active) {
   z-index: 2;
   padding: 0.5rem;
   font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.5);
 }
 .site-footer .site-footer-content {
   display: flex;
@@ -473,14 +492,20 @@ html:not(.wf-active) {
   height: 20px;
   fill: #fff;
 }
-.home-template .post-content {
+.home-template .site-main .post-inner {
+  background: none;
+}
+.home-template .site-main .post-content {
   background: none;
   text-align: center;
 }
-.home-template .post-content > *:not(.styled-header) {
+.home-template .site-main .post-content > *:not(.styled-header):not(hr) {
   background: rgba(0, 0, 0, 0.5);
   margin: 0 auto;
   padding: 1rem;
+}
+.home-template .site-main .post-content p {
+  font-size: 1.2rem;
 }
 body {
   background: #000;
@@ -499,9 +524,10 @@ body {
 .site-main {
   z-index: 1;
   flex-grow: 1;
+  margin: 1rem 0;
 }
-.site-main .inner {
-  padding: 2rem 1rem;
+.site-main > .inner {
+  padding: 1rem;
 }
 .site-footer {
   z-index: 2;
@@ -515,19 +541,13 @@ body {
 .kg-card.kg-width-full {
   width: 100vw;
 }
-.post-content {
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.5);
-  max-width: 1200px;
-}
-.post-content a:link,
-.post-content a:visited {
-  color: #365D96;
-  text-decoration: underline;
+.post-content hr {
+  padding: 0;
 }
 #modal-wrapper {
   position: relative;
   z-index: 999;
+  display: none;
 }
 .modal {
   background-color: rgba(0, 0, 0, 0.5);

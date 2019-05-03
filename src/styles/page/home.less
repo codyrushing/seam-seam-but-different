@@ -1,13 +1,27 @@
 .home-template {
-  .post-content {
-    background: none;
-    text-align: center;
 
-    & > *:not(.styled-header) {
-      background: rgba(0,0,0,0.5);
-      margin: 0 auto;
-      padding: 1rem;
+  .site-main {
+
+    .post-inner {
+      background: none;
     }
+    .post-content {
+      background: none;
+      text-align: center;
+
+      & > *:not(.styled-header):not(hr) {
+        background: rgba(0,0,0,0.5);
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+
   }
+
 
 }

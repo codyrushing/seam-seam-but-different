@@ -146,7 +146,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _webfontloader.default.load({
   google: {
-    families: ['PT Sans:400,700']
+    families: ['Alegreya:400,400i,700']
   },
   custom: {
     families: ['Wigrum']
@@ -180,7 +180,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58279" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58851" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

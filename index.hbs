@@ -6,7 +6,9 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
   <div class="inner">
-    {{> post-content}}
+    {{#post}}
+      {{> post-content}}
+    {{/post}}
   </div>
 </main>
 

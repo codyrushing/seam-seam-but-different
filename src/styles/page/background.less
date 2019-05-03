@@ -25,15 +25,21 @@
     object-fit: cover;
 
     // ensure coverage on wide displays
-    @media only screen and (min-aspect-ratio: ~"16/9"){
+    @media only screen and (min-aspect-ratio: ~"4/3"){
+      // width: 100%;
+      // height: auto;
+      object-fit: cover;
       width: 100%;
-      height: auto;
     }
+
+  }
+
+  video {
     // on narrow portrait screens, scale the video down so it's not so zoomed in
     @media only screen and (max-aspect-ratio: ~"3/4"){
       max-width: 200%;
       object-fit: contain;
     }
-
   }
+  
 }
