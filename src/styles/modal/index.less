@@ -1,3 +1,16 @@
+@import 'site-nav.less';
+
+@keyframes popin {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 #modal-wrapper {
   position: relative;
   z-index: 999;
@@ -5,19 +18,38 @@
 }
 
 .modal {
-  background-color: rgba(0,0,0,.5);
+  // for iOS clickability
+  cursor: pointer;
+  background-color: @color-background-dark;
   position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   .inner {
+    cursor: default;
     position: relative;
+    padding: 2rem;
     width: 685px;
     max-width: 90%;
+    background: @color-turquoise;// rgba(red(@color-blue), green(@color-blue), blue(@color-blue), 0.8);
     box-shadow: 0 0 8px rgba(0,0,0,.5);
+  }
+}
+
+body.modal-open {
+
+  #modal-wrapper {
+    display: flex;
+  }
+
+  .modal.active {
+    display: flex;
+    .inner {
+      animation: popin 0.1s ease-in-out;
+    }
   }
 }

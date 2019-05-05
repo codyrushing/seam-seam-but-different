@@ -92,6 +92,7 @@
     "dependencies": {
         "normalize.css": "^8.0.1",
         "parcel-bundler": "^1.12.3",
+        "viewport-units-buggyfill": "^0.6.2",
         "webfontloader": "^1.6.28"
     }
 }

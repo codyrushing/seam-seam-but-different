@@ -1,25 +1,31 @@
 .site-main {
 
-  .post-title {
+  & > .title {
     display: flex;
+    justify-content: center;
     h1 {
       display: inline-block;
-      padding: 0.5rem;
-      background: @color-turquoise;
+      padding: 0.5rem 1rem;
+      background: rgba(red(@color-red), green(@color-red), blue(@color-red), 0.8);
+      text-shadow: 0 -1px 1px rgba(0,0,0,0.8);
     }
   }
 
-  & > .post-inner {
+  & > .inner {
     margin: 0 auto;
-    background: rgba(0,0,0,0.5);
+    background: @color-background-dark;
     max-width: 1200px;
-    padding: 0.5rem;
+    padding: 1rem 2rem;
   }
 
   a:link,
   a:visited {
-    color: @color-blue;
+    color: @color-pale-turquoise;
     text-decoration: underline;
+    text-underline-position: under;
+    &:hover {
+      color: @color-pink;
+    }
   }
 
 }

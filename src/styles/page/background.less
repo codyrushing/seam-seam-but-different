@@ -18,10 +18,8 @@
   video,
   img {
     z-index: -100;
-    min-width: 800px;
     position: relative;
-    height: 100%;
-    width: auto;
+    min-width: 100%;
     object-fit: cover;
 
     // ensure coverage on wide displays
@@ -34,12 +32,13 @@
 
   }
 
-  video {
+  video,
+  img {
     // on narrow portrait screens, scale the video down so it's not so zoomed in
     @media only screen and (max-aspect-ratio: ~"3/4"){
-      max-width: 200%;
+      max-width: 250%;
       object-fit: contain;
     }
   }
-  
+
 }

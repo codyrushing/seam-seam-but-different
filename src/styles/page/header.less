@@ -2,6 +2,11 @@
   background: rgba(0,0,0,0.8);
   // background: linear-gradient(180deg, rgba(17,17,17,0.8) 0%, rgba(17,17,17,0.8) 80%, rgba(17,17,17,0) 100%);
 
+  a {
+    text-decoration: none;
+    color: @color-light;
+  }
+
   .top-nav {
     display: flex;
     justify-content: space-between;
@@ -13,19 +18,31 @@
     .top-nav-logo {
       display: block;
       padding: 0.5rem;
+      transition: background .1s ease-in-out;
       svg {
         height: 45px;
-        transition: fill 0.1s ease-in-out;
+        .respond-to-mobile-large({
+          height: 35px;
+        });
+      }
+      &:hover {
+        background: @color-turquoise;
+        // svg {
+        //   fill: @color-blue;
+        // }
       }
     }
 
     a {
       padding: 1rem;
       margin: 0 0.1rem;
+      display: block;
       transition: color 0.1s ease-in-out;
-      &:hover {
-        color: @color-pale-turquoise;
-      }
+    }
+
+    .nav-current > a,
+    a:hover {
+      color: @color-pale-turquoise;
     }
 
     .links {
@@ -37,7 +54,7 @@
     }
 
     .nav {
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       list-style: none;
@@ -49,11 +66,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      a:hover {
-        svg {
-          fill: @color-pale-turquoise;
-        }
-      }
       svg {
         height: 20px;
         fill: @color-light;
@@ -61,10 +73,37 @@
       }
     }
 
+    .menu-link {
+      svg {
+        height: 20px;
+      }
+      // &:hover {
+      //   color: @color-light;
+      // }
+    }
+
+    .nav-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        padding: 1rem 0.5rem;
+      }
+    }
+
+    .respond-to-min-width(
+      @ipad-portrait-width,
+      {
+        .nav {
+          display: flex;
+        }
+        .menu-link {
+          display: none;
+        }
+      }
+    );
+
   }
 
-  a {
-    text-decoration: none;
-    color: @color-light;
-  }
+
 }

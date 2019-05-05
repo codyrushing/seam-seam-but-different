@@ -15,9 +15,10 @@ const bundlers = [
     }
   ),
   new Parcel(
-    path.join(__dirname, 'src/js/app.js'),
+    path.join(__dirname, 'src/js/index.js'),
     {
-      outDir: publicDir
+      outDir: publicDir,
+      outFile: 'app.js'
     }
   )
 ];

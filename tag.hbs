@@ -4,33 +4,38 @@
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
-    <div class="inner">
 
-        <div className="post-header">
-          <h1 class="site-title">{{name}}</h1>
-          <h2 class="site-description">
-              {{#if description}}
-                  {{description}}
-              {{else}}
-                  A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
-              {{/if}}
-          </h2>
-        </div>
+  <div class="title">
+    <h1>{{name}}</h1>
+  </div>
 
-      <div class="post-feed">
-        {{#foreach posts}}
-          {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-          {{> "post-card"}}
-        {{/foreach}}
-      </div>
-
+  <div class="inner">
+    <div className="post-header">
+      {{#if description}}
+        <h2 class="site-description">
+          {{description}}
+        </h2>
+      {{/if}}
     </div>
+
+{{/tag}}
+
+    <div class="post-feed">
+      {{#foreach posts}}
+        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+        {{> post-card}}
+      {{/foreach}}
+    </div>
+
+  </div>
 </main>
 
-<div class="site-background">
-  {{#if feature_image}}
-    <img src="{{feature_image}}" />
-  {{/if}}
-</div>
+{{#tag}}
+
+  <div class="site-background">
+    {{#if feature_image}}
+      <img src="{{feature_image}}" />
+    {{/if}}
+  </div>
 
 {{/tag}}

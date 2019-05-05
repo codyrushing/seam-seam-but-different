@@ -2,17 +2,19 @@
 
   .site-main {
 
-    .post-inner {
+    .inner {
       background: none;
     }
     .post-content {
       background: none;
       text-align: center;
+      display: block;
 
       & > *:not(.styled-header):not(hr) {
-        background: rgba(0,0,0,0.5);
+        background: rgba(0,0,0,0.6);
         margin: 0 auto;
         padding: 1rem;
+        max-width: 1200px;
       }
 
       p {

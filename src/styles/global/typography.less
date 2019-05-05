@@ -1,5 +1,5 @@
 body {
-  font-family: 'Alegreya', serif;
+  font-family: 'Wigrum', sans-serif;
   line-height: 1.2;
   font-size: 16px;
 }
@@ -8,7 +8,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Wigrum';
+  font-family: 'Alegreya', serif;
+  font-weight: 400;
 }
 
 a:link,
@@ -24,3 +25,15 @@ html:not(.wf-active) {
 .center {
   text-align: center;
 }
+
+.respond-to-min-width(@ipad-portrait-width, {
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.35rem;
+  }
+});
