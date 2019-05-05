@@ -41,6 +41,8 @@ export default class App {
         }
       );
 
+
+
     document.querySelectorAll('a[rel="modal"]')
       .forEach(
         link => {
@@ -61,6 +63,17 @@ export default class App {
         e => {
           e.stopPropagation()
         }
+      );
+
+    document.querySelectorAll('.modal-close')
+      .forEach(
+        link => link.addEventListener(
+          'click',
+          e => {
+            this.closeModal();
+            e.preventDefault();
+          }
+        )
       );
   }
   openModalFromLink(link){

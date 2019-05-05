@@ -1,11 +1,12 @@
 #site-nav-modal {
-  a {
+  a:not(.modal-close) {
     display: block;
     padding: 1rem;
     &:active,
     &:hover,
     &:focus {
-      background: @color-blue;
+      background: @color-light;
+      color: @color-turquoise;
     }
   }
 
