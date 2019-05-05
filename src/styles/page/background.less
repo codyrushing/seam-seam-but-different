@@ -1,7 +1,7 @@
 .site-background {
   position: fixed;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   z-index: -1;
   height: 100vh;
   top: 0;
@@ -37,7 +37,7 @@
     // on narrow portrait screens, scale the video down so it's not so zoomed in
     @media only screen and (max-aspect-ratio: ~"3/4"){
       max-width: 250%;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 
