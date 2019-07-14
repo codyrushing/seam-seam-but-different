@@ -1,5 +1,11 @@
 <nav class="top-nav">
-    <a class="top-nav-logo" href="{{@site.url}}">{{> icons/seam-logo }}</a>
+    <a class="top-nav-logo" href="{{@site.url}}">
+      {{#if @site.logo}}
+        <img src="{{@site.logo}}" />
+      {{else}}
+        {{> icons/seam-logo }}
+      {{/if}}
+    </a>
       {{#if @site.navigation}}
           {{navigation}}
       {{/if}}
