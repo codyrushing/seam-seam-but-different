@@ -453,7 +453,7 @@ html:not(.wf-active) {
 .site-main > .title h1 {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: rgba(238, 62, 53, 0.8);
+  background: rgba(228, 46, 25, 0.8);
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8);
   margin-bottom: 0.5rem;
 }
@@ -564,10 +564,10 @@ html:not(.wf-active) {
   display: none;
 }
 .tag-hash-bg-red .post-title > h1 {
-  background: black;
+  background: #365D96;
 }
 .tag-hash-bg-red .site-background {
-  background: #ee3e35;
+  background: #e42e19;
 }
 .tag-hash-bg-green .site-background img,
 .tag-hash-bg-green .site-background video {
@@ -583,8 +583,46 @@ html:not(.wf-active) {
 .tag-hash-bg-blue .site-background {
   background: #365D96;
 }
+.tag-hash-bg-orange .site-background img,
+.tag-hash-bg-orange .site-background video {
+  display: none;
+}
+.tag-hash-bg-orange .site-background {
+  background: #fb9c37;
+}
+.tag-hash-bg-yellow .site-background img,
+.tag-hash-bg-yellow .site-background video {
+  display: none;
+}
+.tag-hash-bg-yellow .site-background {
+  background: #ffdd6f;
+}
+.tag-hash-bg-purple .site-background img,
+.tag-hash-bg-purple .site-background video {
+  display: none;
+}
+.tag-hash-bg-purple .site-background {
+  background: #661564;
+}
+.tag-hash-bg-purple-dark .site-background img,
+.tag-hash-bg-purple-dark .site-background video {
+  display: none;
+}
+.tag-hash-bg-purple-dark .site-background {
+  background: #3B0839;
+}
+.tag-past-shows .site-background img,
+.tag-past-shows .site-background video {
+  display: none;
+}
+.tag-past-shows .title > h1 {
+  background: #365D96;
+}
+.tag-past-shows .site-background {
+  background: #fb9c37;
+}
 .tag-hash-theme-red .post-title > h1 {
-  background: #ee3e35;
+  background: #e42e19;
 }
 .tag-hash-theme-green .post-title > h1 {
   background: #007a7b;
@@ -767,7 +805,7 @@ body {
   padding: 2rem;
   width: 685px;
   max-width: 90%;
-  background: #58848B;
+  background: #661564;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 .modal .modal-close {
@@ -811,7 +849,7 @@ body.modal-open .modal.active .inner {
   background: #58848B;
 }
 .styled-header span:nth-child(2n):before {
-  background: #ee3e35;
+  background: #e42e19;
 }
 .styled-header span:nth-child(3n):before {
   background: #365D96;
@@ -860,7 +898,7 @@ body.modal-open .modal.active .inner {
 .site-main .button:link.red,
 .site-main button:visited.red,
 .site-main .button:visited.red {
-  background: #ee3e35;
+  background: #e42e19;
 }
 .site-main button.small,
 .site-main .button.small,
