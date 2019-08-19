@@ -1,0 +1,39 @@
+{{!< default}}
+
+<main id="site-main" class="site-main outer">
+  <div class="inner">
+    {{#get "posts" limit="all" filter="tag:past-shows+tag:2019" order="published_at desc" include="tags"}}
+      <div class="year-group">
+        <div class="title">
+          <h1>2019</h1>
+        </div>
+        <div class="post-feed past-shows past-shows-2019">
+          {{#foreach posts}}
+            {{> post-card}}
+          {{/foreach}}
+        </div>
+      </div>
+    {{/get}}
+
+    {{#get "posts" limit="all" filter="tag:past-shows+tag:2018" order="published_at desc" include="tags"}}
+      <div class="year-group">
+        <div class="title">
+          <h1>2018</h1>
+        </div>
+        <div class="post-feed past-shows past-shows-2018">
+          {{#foreach posts}}
+            {{> post-card}}
+          {{/foreach}}
+        </div>
+      </div>
+    {{/get}}
+
+
+  </div>
+</main>
+
+{{> site-background}}
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+{{/contentFor}}
